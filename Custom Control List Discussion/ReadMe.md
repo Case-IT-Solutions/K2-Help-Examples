@@ -7,3 +7,6 @@ This file contains an example of all the configuration values of the multiselect
 
 MultiSelecctProperties.XML
 This file contains the properties configuration XML for th multiselect control.
+
+MultiSelectControl.KSPX
+An example package illustrating the use of a SmartObject List based control. K2 Drop Down Example.kspx should be deployed first if you require some dummy data, as that package contrains mocked up demo data. 
