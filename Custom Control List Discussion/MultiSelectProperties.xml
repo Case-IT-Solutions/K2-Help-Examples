@@ -1,0 +1,55 @@
+<Properties>
+  <Prop ID="ControlName" mappable="false" ValidationPattern="\S" ValidationMessage="InvalidName" DesignerValidate="SourceCode.Forms.Designers.validateControlName" friendlyname="Name" type="string" category="Detail" inputlength="200" />
+  <Prop ID="SourceTitle" translatable="true" refreshdisplay="true" friendlyname="Source Title" type="string" category="Detail" setFunction="SourceCode.Forms.Controls.Web.ControlPack.MultiChoice.setSourceTitle" inputlength="255">
+    <InitialValue>Available Items</InitialValue>
+  </Prop>
+  <Prop ID="DestinationTitle" translatable="true" refreshdisplay="true" friendlyname="Destination Title" type="string" category="Detail" setFunction="SourceCode.Forms.Controls.Web.ControlPack.MultiChoice.setDestinationTitle" inputlength="255">
+    <InitialValue>Selected Items</InitialValue>
+  </Prop>
+  <Prop ID="AccessibilityText" translatable="true" friendlyname="Accessibility Text" type="string" category="Detail" refreshdisplay="true" inputlength="255" />
+  <Prop ID="DataSourceType" mappable="false" friendlyname="Type" type="complex" serverControlType="property" category="Data Source" refreshdisplay="true" InitializeServerControl="initCommonDataSourceConfig" ClearServerControl="clearComplexPropertyConfig" ServerControl="SourceCode.Forms.Controls.Web.PropertyConfiguration.AssociationPropertyConfig,SourceCode.Forms.Controls.Web" />
+  <Prop ID="FixedListItems" mappable="false" friendlyname="Items" type="string" serverControlType="property" category="Data Source" ReadOnly="true" />
+  <Prop ID="DefaultSOProperty" mappable="false" friendlyname="Default SmartObject Property" type="string" serverControlType="property" category="Data Source" ReadOnly="true" />
+  <Prop ID="AssociationSO" mappable="false" friendlyname="SmartObject" type="string" serverControlType="smartobject" category="Data Source" ReadOnly="true" />
+  <Prop ID="AssociationMethod" mappable="false" friendlyname="Method" type="string" serverControlType="listmethod" category="Data Source" ReadOnly="true" />
+  <Prop ID="ValueProperty" mappable="false" friendlyname="Value" type="string" serverControlType="property" category="Data Source" ReadOnly="true" />
+  <Prop ID="DisplaySO" mappable="false" friendlyname="Lookup SmartObject" type="string" serverControlType="smartobject" category="Data Source" ReadOnly="true" />
+  <Prop ID="DisplayMethod" mappable="false" friendlyname="Lookup Method" type="string" serverControlType="listmethod" category="Data Source" ReadOnly="true" />
+  <Prop ID="AssociatedJoinProperty" mappable="false" friendlyname="Source Join Property" type="string" serverControlType="property" category="Data Source" ReadOnly="true" />
+  <Prop ID="DisplayJoinProperty" mappable="false" friendlyname="Lookup Join Property" serverControlType="property" type="string" category="Data Source" ReadOnly="true" />
+  <Prop ID="DisplayTemplate" mappable="false" friendlyname="Display" type="string" serverControlType="property" category="Data Source" ReadOnly="true" />
+  <Prop DisplayPropertyMethod="SourceCode.Forms.Controls.Web.ControlPack.MultiChoice.displayProperty" ID="DisplayType" type="string" friendlyname="Display Type" category="Display" refreshdisplay="true" showIcon="true" inputlength="255">
+    <InitialValue>multiselect</InitialValue>
+  </Prop>
+  <Prop ID="Delimiter" ValidationPattern="\S" ValidationMessage="InvalidDelimiter" refreshdisplay="false" friendlyname="Delimiter" type="string" category="Display" inputlength="100">
+    <Value>;</Value>
+  </Prop>
+  <Prop ID="Height" refreshdisplay="true" ValidationPattern="^$|^(3276[0-7]|327[0-5]\d|32[0-6]\d{2}|3[0-1]\d{3}|[1-2]\d{4}|[1-9]\d{0,3}|\d){1}(px)?$" ValidationMessage="InvalidHeight" friendlyname="Height" type="string" category="General" inputlength="100" setFunction="SourceCode.Forms.Controls.Web.ControlPack.MultiChoice.setHeight" getFunction="GetControlHeight">
+    <InitialValue>175px</InitialValue>
+  </Prop>
+  <Prop ID="Width" refreshdisplay="true" ValidationPattern="^(100|[0-9]{1,2})%?$|^(3276[0-7]|327[0-5]\d|32[0-6]\d{2}|3[0-1]\d{3}|[1-2]\d{4}|[1-9]\d{0,3}|\d){1}(px)?$" ValidationMessage="InvalidWidth" friendlyname="Width" type="string" category="General" inputlength="100" setFunction="SourceCode.Forms.Controls.Web.ControlPack.MultiChoice.setWidth" getFunction="GetControlWidth">
+    <Value>100%</Value>
+  </Prop>
+  <Prop ID="TabIndex" ValidationPattern="^$|^(12[0-6]|1[0-1]\d|\d{1,2}){1}$|^(\(None\)|\(Default\)|none|default|0|-1)$" ValidationMessage="InvalidTabIndex" friendlyname="Tab Index" type="spin" category="General" refreshdisplay="false" inputlength="20" setFunction="SourceCode.Forms.Controls.Web.ControlPack.MultiChoice.setTabIndex" GetSpinOptionsFunction="SourceCode.Forms.Designers.Common._getTabIndexSpinnerOptions">
+    <Value>0</Value>
+  </Prop>
+  <Prop ID="IsVisible" friendlyname="Visible" type="bool" category="General" refreshdisplay="true" setFunction="SourceCode.Forms.Controls.Web.ControlPack.MultiChoice.setVisible">
+    <Value>true</Value>
+  </Prop>
+  <Prop ID="IsEnabled" friendlyname="Enabled" type="bool" category="General" refreshdisplay="true" setFunction="SourceCode.Forms.Controls.Web.ControlPack.MultiChoice.setEnabled">
+    <Value>true</Value>
+  </Prop>
+  <Prop ID="IsReadOnly" friendlyname="Read-Only" type="bool" category="General" refreshdisplay="true" setFunction="SourceCode.Forms.Controls.Web.ControlPack.MultiChoice.setReadOnly">
+    <Value>false</Value>
+  </Prop>
+  <Prop ID="ParentControl" mappable="false" friendlyname="Parent Control" type="string" serverControlType="property" category="Data Source" ReadOnly="true" GetDisplay="SourceCode.Forms.Controls.Web.ControlPack.MultiChoice.getDisplay" />
+  <Prop ID="Styles" mappable="false" setFunction="SourceCode.Forms.Controls.Web.ControlPack.MultiChoice.setStyles" friendlyname="Format" type="complex" category="General" refreshdisplay="true" DesignerSet="SourceCode.Forms.Designers.View.Styles._showEditStyles" />
+  <Prop ID="ConditionalStyles" mappable="false" friendlyname="Conditional Format" type="complex" category="General" refreshdisplay="false" DesignerSet="SourceCode.Forms.Designers.View.Styles.showEditConditionalStyles" />
+  <Prop ID="Field" mappable="false" friendlyname="Field" category="Detail" refreshdisplay="false" type="complex" InitializeServerControl="initializeFieldPropertyConfig" ClearServerControl="clearFieldConfig" ServerControl="SourceCode.Forms.Controls.Web.FieldConfiguration.FieldPropertyConfig,SourceCode.Forms.Controls.Web" />
+  <Prop ID="DisplayField" mappable="false" friendlyname="Display Field" category="Detail" refreshdisplay="false" type="complex" InitializeServerControl="initializeDisplayFieldPropertyConfig" ClearServerControl="clearPropertyConfig" ServerControl="SourceCode.Forms.Controls.Web.FieldConfiguration.FieldPropertyConfig,SourceCode.Forms.Controls.Web" GetDisplay="ControlUtil.getFieldDisplay" />
+  <Prop ID="DataType" mappable="false" setFunction="SetDataType" friendlyname="Data Type" type="drop" category="Detail" refreshdisplay="true" getDropItemsFunction="getDataTypesForControl" SelectionValue="" SelectionText="" inputlength="255">
+    <InitialValue>Text</InitialValue>
+  </Prop>
+  <Prop ID="ParentJoinProperty" mappable="false" friendlyname="Parent Join Property" type="string" serverControlType="property" category="Data Source" ReadOnly="true" />
+  <Prop ID="ChildJoinProperty" mappable="false" friendlyname="Child Join Property" type="string" serverControlType="property" category="Data Source" ReadOnly="true" />
+</Properties>
